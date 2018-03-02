@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="info.php">PHP info</a>    
+    <a href="info.php">PHP info</a>
 </body>
 </html>
