@@ -30,6 +30,21 @@ sudo cp * /var/www/html/
 
 Start browser with http://localhost
 
-### Upload to AWS Beanstalk
+### Upload Web App to AWS Beanstalk
 
 Upload jjweb.zip into web application.
+
+## Deploy to Azure
+
+Provision Azure Web App Service with Linux service plan (for testing plan B1 is fine).
+
+You will get url like https://jjweblinux.azurewebsites.net
+
+### Upload Web App to Azure App Service
+
+For testing simple way is to open Kudu and Bash and run git clone command
+
+```bash
+cd site/wwwroot
+git clone https://github.com/jjindrich/jjaws-web-php.git
+```
