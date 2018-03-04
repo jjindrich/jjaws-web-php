@@ -1,5 +1,11 @@
 # JJ AWS website running PHP
 
+This sample demonstrates how to run PHP website using MySql on Amazon WebServices and on Microsoft Azure.
+
+AWS https://aws.amazon.com/console/
+
+Azure https://portal.azure.com
+
 ## Deploy localy
 
 ### Prepare package
@@ -33,14 +39,14 @@ CREATE TABLE jjtable (id INT, name VARCHAR(10));
 INSERT INTO jjtable VALUES (1,'ahoj');
 ```
 
-## Deploy to AWS services
+## Deploy to AWS
 
 Provision AWS Elastic Beanstalk in AWS with PHP configuration.
 Create new Environment for your application, in my case jjweb.
 
 You will get url like http://jjweb.eu-central-1.elasticbeanstalk.com/
 
-### Upload Web App to AWS Beanstalk
+### Upload website to AWS Beanstalk
 
 Upload jjweb.zip into web application.
 
@@ -60,7 +66,7 @@ Connect to database and deploy schema
 mysql -u jj@jjmysql -h jjmysql.mysql.database.azure.com -p
 ```
 
-### Upload Web App to Azure App Service
+### Upload website to Azure App Service
 
 For testing simple way is to open Kudu and Bash and run git clone command
 
