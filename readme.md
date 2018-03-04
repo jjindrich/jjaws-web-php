@@ -66,6 +66,8 @@ Connect to database and deploy schema
 mysql -u jj@jjmysql -h jjmysql.mysql.database.azure.com -p
 ```
 
+Allow access to Azure services in Connection security settings.
+
 ### Upload website to Azure App Service
 
 For testing simple way is to open Kudu and Bash and run git clone command
