@@ -8,6 +8,10 @@ Azure https://portal.azure.com
 
 ## Deploy localy
 
+### Change connection to MySql database
+
+Change connection settings in code, uncomment AWS/Azure section.
+
 ### Prepare package
 
 ```powershell
@@ -45,7 +49,7 @@ Provision AWS Elastic Beanstalk in AWS with PHP configuration.
 Create new Environment for your application, in my case jjweb.
 
 For MySql database provision new AWS Aurora. You will get new connection like
-jjmysql-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com
+jjaurora-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com
 
 You will get url like http://jjweb.eu-central-1.elasticbeanstalk.com/
 
@@ -54,10 +58,10 @@ You will get url like http://jjweb.eu-central-1.elasticbeanstalk.com/
 Connect to database and deploy schema
 
 ```bash
-mysql -u jj@jjmysql -h jjmysql-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com -p
+mysql -u jj -h jjaurora-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com -p
 ```
 
-Change security group settings to allow connection from website.
+Change security group settings to allow connection from internet/website.
 
 ### Upload website to AWS Beanstalk
 

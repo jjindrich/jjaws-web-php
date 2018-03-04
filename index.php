@@ -21,8 +21,16 @@ error_reporting(E_ALL);
 $link = mysqli_init();
 
 // Azure connection
+/*
 mysqli_ssl_set($link,NULL,NULL, "/var/www/html/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
 mysqli_real_connect($link, 'jjmysql.mysql.database.azure.com', 'jj@jjmysql', 'azure-12345', 'jj', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
+if (mysqli_connect_errno($link)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+*/
+
+// AWS connection
+mysqli_real_connect($link, 'jjaurora-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com', 'jj', 'aws-12345', 'jj');
 if (mysqli_connect_errno($link)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
