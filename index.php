@@ -19,6 +19,8 @@ error_reporting(E_ALL);
 <br>
 <?php
 $link = mysqli_init();
+
+// Azure connection
 mysqli_ssl_set($link,NULL,NULL, "/var/www/html/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL) ; 
 mysqli_real_connect($link, 'jjmysql.mysql.database.azure.com', 'jj@jjmysql', 'azure-12345', 'jj', 3306, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
 if (mysqli_connect_errno($link)) {

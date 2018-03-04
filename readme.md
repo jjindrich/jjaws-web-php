@@ -44,7 +44,20 @@ INSERT INTO jjtable VALUES (1,'ahoj');
 Provision AWS Elastic Beanstalk in AWS with PHP configuration.
 Create new Environment for your application, in my case jjweb.
 
+For MySql database provision new AWS Aurora. You will get new connection like
+jjmysql-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com
+
 You will get url like http://jjweb.eu-central-1.elasticbeanstalk.com/
+
+### Create MySql database in AWS
+
+Connect to database and deploy schema
+
+```bash
+mysql -u jj@jjmysql -h jjmysql-cluster.cluster-cgrmtrhrphvm.eu-central-1.rds.amazonaws.com -p
+```
+
+Change security group settings to allow connection from website.
 
 ### Upload website to AWS Beanstalk
 
@@ -58,7 +71,7 @@ You will get url like https://jjweblinux.azurewebsites.net
 
 For MySql database provision new Azure Database for MySql server. You will get new connection like jjmysql.mysql.database.azure.com
 
-### Create MySql database
+### Create MySql database in Azure
 
 Connect to database and deploy schema
 
@@ -66,7 +79,7 @@ Connect to database and deploy schema
 mysql -u jj@jjmysql -h jjmysql.mysql.database.azure.com -p
 ```
 
-Allow access to Azure services in Connection security settings.
+Allow access to Azure services in Connection security settings to allow connection from website.
 
 ### Upload website to Azure App Service
 
